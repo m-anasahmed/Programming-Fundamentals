@@ -1,0 +1,13 @@
+// My first program in C++
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   cout << "Hello World! My name is Anas." << endl;
+   return 0;
+}
+
+// This is a simple program designed for understanding code line by line and practicing C++ programming.
+// I understand this is a basic program, but over time, we will delve into more professional aspects of C++ programming.
