@@ -120,3 +120,100 @@ int main() {
 
     return 0;
 }
+
+//Code 07
+//This is a Sample code for "stdarg.h" header file.
+#include <iostream>
+#include <cstdarg>
+
+using namespace std;
+
+// Function to calculate the sum of a variable number of integers
+int sum(int count, ...) {
+    int sum = 0;
+
+    // Declare a va_list variable to hold the variable arguments
+    va_list args;
+
+    // Initialize the va_list variable to point to the first argument after 'count'
+    va_start(args, count);
+
+    // Loop through the variable arguments and calculate the sum
+    for (int i = 0; i < count; ++i) {
+        sum += va_arg(args, int);
+    }
+
+    // Clean up the va_list variable
+    va_end(args);
+
+    return sum;
+}
+
+int main() {
+    // Calculate the sum of 3 integers
+    int result = sum(3, 10, 20, 30);
+    cout << "Sum: " << result << endl;
+
+    return 0;
+}
+
+//Code 08
+// This is a Sample code for "errno.h" header file
+#include <iostream>
+#include <cerrno>
+#include <cstring>
+
+using namespace std;
+
+int main() {
+    // Attempt to open a non-existent file
+    FILE* file = fopen("non_existent_file.txt", "r");
+
+    // Check if file opening was successful
+    if (file == NULL) {
+        // Print error message based on errno
+        cout << "Error: " << strerror(errno) << endl;
+    } else {
+        // File opening successful, close the file
+        fclose(file);
+        cout << "File opened successfully!" << endl;
+    }
+
+    return 0;
+}
+
+//Code 09
+//This is a Sample code for "fstream.h" header file
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+    // Writing to a file
+    ofstream outputFile("output.txt");
+    if (outputFile.is_open()) {
+        outputFile << "Hello, World!" << endl;
+        outputFile.close();
+        cout << "Data written to file successfully." << endl;
+    } else {
+        cout << "Unable to open file for writing." << endl;
+    }
+
+    // Reading from a file
+    ifstream inputFile("output.txt");
+    if (inputFile.is_open()) {
+        string line;
+        while (getline(inputFile, line)) {
+            cout << "Data read from file: " << line << endl;
+        }
+        inputFile.close();
+    } else {
+        cout << "Unable to open file for reading." << endl;
+    }
+
+    return 0;
+}
+
+//Code 10
+//This is a Sample code for "time.h" header file
