@@ -1,3 +1,5 @@
+//The given sample code for the mentioned header file in documents is just to understand the purpose of each header file.
+
 //Code 01
 //This is a Sample code for "stdio.h" header file
 #include <stdio.h>
@@ -11,7 +13,6 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
     printf("You entered: %d\n", num);
-
     return 0;
 }
 
@@ -28,7 +29,6 @@ int main() {
     cout << "Enter a number : " << endl;
     cin >> num;
     cout << "You entered : " << num << endl;
-
     return 0;
 }
 
@@ -82,3 +82,41 @@ int main() {
 }
 
 //Code 05
+//This is a Sample code for "iomanip" header file
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double pi = 3.14159265359;
+    cout << "Default precision: " << pi << endl;
+
+    // Set precision to 2 decimal places
+    cout << "Precision set to 2 decimal places: ";
+    cout << fixed << setprecision(2) << pi << endl;
+    return 0;
+}
+
+//Code 06
+//This is a Sample code for "signal.h" header file.
+#include <iostream>
+#include <csignal>
+
+using namespace std;
+
+// Signal handler function
+void signalHandler(int signalNumber) {
+    cout << "Signal received: " << signalNumber << endl;
+}
+int main() {
+    // Registering signal handler for SIGINT (Ctrl+C)
+    signal(SIGINT, signalHandler);
+
+    cout << "Running... Press Ctrl+C to send SIGINT signal." << endl;
+
+    // Infinite loop to keep the program running
+    while (true) {}
+
+    return 0;
+}
