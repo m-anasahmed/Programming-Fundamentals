@@ -331,6 +331,62 @@ int main() {
 
 
 //Code 16
-//This is a Sample code for "float.h" header file
+//This is a Sample code for "setjmp.h" header file
+#include <iostream>
+#include <setjmp.h>
+
+using namespace std;
+
+// Global jump buffer
+jmp_buf jumpBuffer;
+
+void foo() {
+    cout << "Inside foo()" << endl;
+    longjmp(jumpBuffer, 1); // Jump back to where setjmp was called
+}
+
+int main() {
+    // Perform a non-local jump
+    int jumpResult = setjmp(jumpBuffer);
+    if (jumpResult == 0) {
+        cout << "Before calling foo()" << endl;
+        foo();
+        cout << "After calling foo()" << endl;
+    } else {
+        cout << "Jumped back from foo()" << endl;
+    }
+
+    return 0;
+}
+
 //Code 17
-//This is a Sample code for "float.h" header file
+//This is a Sample code for "stddef.h" header file
+#include <iostream>
+#include <stddef.h>
+
+using namespace std;
+
+int main() {
+    // Size of data types
+    cout << "Size of int: " << sizeof(int) << " bytes" << endl;
+    cout << "Size of char: " << sizeof(char) << " bytes" << endl;
+    cout << "Size of double: " << sizeof(double) << " bytes" << endl;
+
+    // Offset of members within a struct
+    struct MyStruct {
+        int a;
+        char b;
+        double c;
+    };
+
+    cout << "Offset of member 'a': " << offsetof(MyStruct, a) << " bytes" << endl;
+    cout << "Offset of member 'b': " << offsetof(MyStruct, b) << " bytes" << endl;
+    cout << "Offset of member 'c': " << offsetof(MyStruct, c) << " bytes" << endl;
+
+    return 0;
+}
+
+// These are sample codes for each header file mentioned in the documents. 
+// However, they do not encompass all the header files available in C++, as there are many. 
+// These codes serve as examples to aid in understanding the concepts associated with each mentioned header file.
+// Thank you...
