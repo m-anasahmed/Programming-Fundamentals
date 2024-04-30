@@ -217,3 +217,120 @@ int main() {
 
 //Code 10
 //This is a Sample code for "time.h" header file
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    
+    // Get the current time
+    time_t currentTime = time(nullptr);
+    // Convert the current time to a string representation
+    char* timeString = ctime(&currentTime);
+    // Output the current time
+    cout << "Current time: " << timeString;
+    
+    return 0;
+}
+
+//Code 11
+//This is a Sample code for "float.h" header file
+#include <iostream>
+#include <float.h>
+
+using namespace std;
+
+int main() {
+    cout << "Minimum positive float value: " << FLT_MIN << endl;
+    cout << "Maximum float value: " << FLT_MAX << endl;
+    cout << "Number of decimal digits of precision: " << FLT_DIG << endl;
+    return 0;
+}
+
+//Code 12
+//This is a Sample code for "limits.h" header file
+#include <iostream>
+#include <limits.h>
+
+using namespace std;
+
+int main() {
+    cout << "Minimum value for char: " << CHAR_MIN << endl;
+    cout << "Maximum value for char: " << CHAR_MAX << endl;
+    cout << "Minimum value for int: " << INT_MIN << endl;
+    cout << "Maximum value for int: " << INT_MAX << endl;
+
+    return 0;
+}
+
+//Code 13
+//This is a Sample code for "assert.h" header file
+#include <iostream>
+#include <cassert>
+
+using namespace std;
+
+int main() {
+    int x = 5;
+    int y = 10;
+
+    // Check if x is equal to y using assert
+    assert(x == y);
+
+    cout << "After assert" << endl;
+
+    return 0;
+}
+
+//Code 14
+//This is a Sample code for "ctype.h" header file
+#include <iostream>
+#include <cctype>
+
+using namespace std;
+
+int main() {
+    char ch = 'A';
+
+    // Check if the character is uppercase
+    if (isupper(ch)) {
+        cout << ch << " is an uppercase letter." << endl;
+    } else {
+        cout << ch << " is not an uppercase letter." << endl;
+    }
+
+    // Convert the character to lowercase
+    char lowerCh = tolower(ch);
+    cout << "Lowercase of " << ch << " is: " << lowerCh << endl;
+
+    return 0;
+}
+
+//Code 15
+//This is a Sample code for "locale.h" header file
+#include <iostream>
+#include <locale.h>
+
+using namespace std;
+
+int main() {
+    // Set the locale to the system's default locale
+    setlocale(LC_ALL, "");
+
+    // Get the current locale
+    char* currentLocale = setlocale(LC_ALL, nullptr);
+    if (currentLocale != nullptr) {
+        cout << "Current locale: " << currentLocale << endl;
+    } else {
+        cout << "Failed to get current locale." << endl;
+    }
+
+    return 0;
+}
+
+
+//Code 16
+//This is a Sample code for "float.h" header file
+//Code 17
+//This is a Sample code for "float.h" header file
