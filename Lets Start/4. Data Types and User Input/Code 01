@@ -1,0 +1,35 @@
+/*
+// Code Example 01
+// This is how we print or display any text on command line.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    cout << "Hello World! I am Muhammad Anas." << endl;   
+    return 0;
+}
+*/
+
+// Code Example 02
+// This is how we take input from user
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int number; // This is how we declare a variable.
+    cout << "Enter a number: ";
+    cin >> number; // This is how we take input from user.
+
+    cout << "You entered: " << number; // This is how we print number.
+    return 0;
+
+}
+
+// We use  this "//" expression to write a comment.
+// We use this "/* */" expression to write a multiline comment like how we comment mutliple line above.
+// We use this "cout" expression to print something on the screen.
+// We use this "<<" expression to print something on the screen.
+// We use this "cin" expression to take input from user.    
+// We use this ">>" expression to take input from user.
