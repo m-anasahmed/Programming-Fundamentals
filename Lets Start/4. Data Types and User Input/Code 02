@@ -67,3 +67,37 @@ int main() {
 
 // Code 04 
 // This is how we use relational operators (The most important code).
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    int b = 10;
+
+    // <, >, <=, >=, ==, !=
+    cout << "Less than: " << (a < b) << endl;
+    cout << "Greater than: " << (a > b) << endl;
+    cout << "Less than or equal to: " << (a <= b) << endl;
+    cout << "Greater than or equal to: " << (a >= b) << endl;
+    cout << "Equal to: " << (a == b) << endl;
+    cout << "Not equal to: " << (a != b) << endl;
+
+    return 0;
+}
+
+// Code 05
+// This is a how we use logicial operators (the most important operators in coding).
+#include <iostream>
+using namespace std;
+
+int main() {
+    bool x = true;
+    bool y = false;
+
+    // &&, ||, !
+    cout << "AND: " << (x && y) << endl;
+    cout << "OR: " << (x || y) << endl;
+    cout << "NOT: " << (!x) << endl;
+
+    return 0;
+}
