@@ -1,0 +1,26 @@
+// Basic Code to understand the operators
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10;
+    int b = 5;
+
+    // Addition
+    cout << "Addition: " << a + b << endl;
+
+    // Subtraction
+    cout << "Subtraction: " << a - b << endl;
+
+    // Multiplication
+    cout << "Multiplication: " << a * b << endl;
+
+    // Division
+    cout << "Division: " << a / b << endl;
+
+    // Modulus
+    cout << "Modulus: " << a % b << endl;
+
+    return 0;
+}
