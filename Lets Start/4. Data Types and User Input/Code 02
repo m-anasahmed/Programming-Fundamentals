@@ -1,5 +1,5 @@
 // Basic Code to understand the operators
-
+// Code 01
 #include <iostream>
 using namespace std;
 
@@ -21,6 +21,22 @@ int main() {
 
     // Modulus
     cout << "Modulus: " << a % b << endl;
+
+    return 0;
+}
+
+// Code 02
+// This is how we use pow function from a header file called "cmath"
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double base = 2.0;
+    double exponent = 3.0;
+
+    // Power
+    cout << "Power: " << pow(base, exponent) << endl;
 
     return 0;
 }
