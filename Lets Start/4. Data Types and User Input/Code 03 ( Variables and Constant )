@@ -1,0 +1,42 @@
+// Code 01
+// Understanding of Variables
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declaring variables
+    int a;                  // Single variable declaration
+    int b, c;               // Multiple variable declarations on the same line
+    
+    // Initializing variables
+    a = 5;                  // Assigning a value to variable 'a'
+    b = 10;                 // Assigning a value to variable 'b'
+    c = a + b;              // Assigning the sum of 'a' and 'b' to variable 'c'
+    
+    // Printing the values of variables
+    cout << "a: " << a << endl;
+    cout << "b: " << b << endl;
+    cout << "c: " << c << endl;
+    
+    return 0;
+}
+
+// Code 02
+// Understanding of Constants
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declaring constants
+    const int MAX_VALUE = 100;      // Constant declaration with the 'const' keyword
+    const float PI = 3.14;          // Constant declaration with the 'const' keyword
+    
+    // Using constants
+    cout << "Maximum Value: " << MAX_VALUE << endl;
+    cout << "Value of PI: " << PI << endl;
+    
+    // Attempting to change the value of a constant (will result in compilation error)
+    // MAX_VALUE = 200;   // Uncommenting this line will result in an error
+    
+    return 0;
+}
