@@ -1,0 +1,28 @@
+// Code 01 
+// For Boolean Values
+#include <iostream>
+using namespace std;
+
+int main() {
+    bool isTrue = true;
+    bool isFalse = false;
+
+    cout << "isTrue: " << isTrue << endl;
+    cout << "isFalse: " << isFalse << endl;
+
+    return 0;
+}
+
+// Code 02
+// For Character type
+#include <iostream>
+using namespace std;
+
+int main() {
+    char grade = 'A';
+    cout << "Grade: " << grade << endl;
+
+    return 0;
+}
+
+// Code 03
