@@ -26,3 +26,54 @@ int main() {
 }
 
 // Code 03
+// Code for using Integer Type.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 10;
+    cout << "Number: " << number << endl;
+
+    return 0;
+}
+
+// Code 04
+// Code for using Floating point type.
+#include <iostream>
+using namespace std;
+
+int main() {
+    float floatValue = 3.14f;
+    double doubleValue = 3.14159;
+
+    cout << "Float Value: " << floatValue << endl;
+    cout << "Double Value: " << doubleValue << endl;
+
+    return 0;
+}
+
+// Code 05
+// Code for Valueless (Void)
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Void type does not hold any value
+    // It is commonly used for functions that do not return any value
+    cout << "Void type does not hold any value." << endl;
+
+    return 0;
+}
+
+// Code 06
+// Code for Wide Character ( wchar_t).
+#include <iostream>
+using namespace std;
+
+int main() {
+    wchar_t wideCharacter = L'€';
+    wcout << "Wide Character: " << wideCharacter << endl;
+
+    return 0;
+}
+
